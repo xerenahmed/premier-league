@@ -30,13 +30,13 @@ jobs:
           cp .env.example .env
           php artisan key:generate
 
-      - name: Cache yarn dependencies
+      - name: Cache npm dependencies
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: yarn-${{ hashFiles('yarn.lock') }}
+          key: npm-${{ hashFiles('package-lock.json') }}
 
-      - name: Run yarn
+      - name: Run npm
         run: npm install && npm run build
 
       - name: Run tests
