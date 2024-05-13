@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@font-face {*/
+/*    font-family: 'Premier Sans';*/
+/*    src: url('../fonts/premier_sans-webfont.woff2') format('woff2'),*/
+/*    url('../fonts/premier_sans-webfont.woff') format('woff'),*/
+/*url('../fonts/Premier Sans.ttf') format('truetype');*/
+/*}*/
+@font-face {
+    font-family: 'Premier-Sans-Regular';
+    src: url('../fonts/PremierLeagueW01-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Premier-Sans-Heavy';
+    src: url('../fonts/PremierLeagueW01-Heavy.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Premier-Sans-Bold';
+    src: url('../fonts/PremierLeagueW01-Bold.woff2') format('woff2');
+}
+
+:root {
+    --theme-color: #37003c;
+}
+
+button {
+    transition: all 500ms;
+}
+button:active {
+    scale: 0.9;
+    background-color: var(--theme-color) !important;
+    color: white !important;
+    opacity: 0.8;
+}
+button:disabled {
+    background-color: gray !important;
+}
+body {
+    @apply min-h-screen;
+    background-color: var(--theme-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23bfbac8' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
