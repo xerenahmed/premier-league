@@ -41,7 +41,8 @@ jobs:
 
       - name: Run tests
         run: |
-          touch ./database/database.sql
+          pwd
+          touch /home/runner/work/premier-league/premier-league/database/database.sqlite
           php artisan test
         env:
           APP_ENV: testing
